@@ -23,6 +23,9 @@ app.get('/', (request, response) => {
     .send('Para experiemtar a aplicação, vá para a rota /restaurantes')
 })
 
+const restaurantesRouter = require('./routes/restaurantes')
+app.use('/restaurantes', restaurantesRouter)
+
 /**
  * Listening
  */
